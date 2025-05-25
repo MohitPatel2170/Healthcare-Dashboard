@@ -1,0 +1,66 @@
+/* SimpleAppointmentCard.module.css */
+.simpleAppointmentCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 13px;
+  border-radius: 12px;
+  background-color: #e4e9fb;
+  width: 180px;
+  height: 60px;
+  position: relative; /* 👈 Required for absolute positioning of icon */
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.simpleAppointmentCard:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.cardLeft {
+  display: flex;
+   justify-content: space-between;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  width: 100%;
+}
+
+.appointmentIcon {
+  position: absolute; 
+  top: 12px;
+  right: 20px;
+  font-size: 20px;
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.appointmentInfo {
+  flex: 1;
+  margin-left: 1px;
+}
+
+.appointmentTitle {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0 0 2px 0;
+  line-height: 1.2;
+}
+
+.appointmentTime {
+  font-size: 12px;
+  margin: 0 0 2px 0;
+  opacity: 0.9;
+  line-height: 1.2;
+}
+
+.appointmentDoctor {
+  font-size: 11px;
+  margin: 0;
+  opacity: 0.8;
+  line-height: 1.2;
+}

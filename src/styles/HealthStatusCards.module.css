@@ -1,0 +1,114 @@
+/* src/styles/HealthStatusCards.module.css */
+
+.healthStatusCards {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 300px;
+}
+.organHeader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.healthCard {
+  background: #f6faff ;
+  border-radius: 16px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  border: 1px solid #f1f3f4;
+  transition: all 0.2s ease;
+  min-width: 200px;
+}
+
+.healthCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.healthCardIcon {
+  all: unset;
+  font-size: 28px; /* slightly bigger */
+  line-height: 1;
+  display: flex;
+  align-items: center;
+}
+
+.healthCardContent {
+  flex: 1;
+  min-width: 0;
+}
+
+.organName {
+  font-size: 16px;
+  font-weight: 600;
+  color: #100b8b;
+  margin: 0 ;
+}
+
+.healthDate {
+  font-size: 12px;
+  color: #6c757d;
+  margin: 0 0 12px 0;
+}
+
+.progressBar {
+  width: 100%;
+  height: 6px;
+  background: #f1f3f4;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  border-radius: 3px;
+  transition: width 0.3s ease;
+}
+
+
+
+/* Responsive design */
+@media (max-width: 1024px) {
+  .healthStatusCards {
+    max-width: none;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  .healthCard {
+    flex: 1;
+    min-width: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .healthStatusCards {
+    flex-direction: column;
+  }
+  
+  .healthCard {
+    padding: 16px;
+    gap: 12px;
+  }
+  
+  .healthCardIcon {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+  
+  .organName {
+    font-size: 14px;
+  }
+  
+  .healthDate {
+    font-size: 11px;
+  }
+}

@@ -1,0 +1,54 @@
+/* UpcomingSchedule.module.css */
+.upcomingSchedule {
+  background: #f6faff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  
+}
+
+.scheduleTitle {
+  font-size: 18px;
+  font-weight: 600;
+  color: #100b8b;
+  margin: 0 0 20px 0;
+}
+
+.scheduleDay {
+  margin-bottom: 20px;
+}
+
+.scheduleDay:last-child {
+  margin-bottom: 0;
+}
+
+.dayTitle {
+  font-size: 14px;
+  font-weight: 500;
+  color: #6c757d;
+  margin: 0 0 12px 0;
+}
+
+.dayAppointments {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .upcomingSchedule {
+    padding: 16px;
+  }
+  
+  .scheduleTitle {
+    font-size: 16px;
+    margin-bottom: 16px;
+  }
+  
+  .dayTitle {
+    font-size: 13px;
+    margin-bottom: 10px;
+  }
+}

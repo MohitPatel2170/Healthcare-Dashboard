@@ -1,0 +1,28 @@
+/* src/styles/App.module.css */
+
+.app {
+  min-height: 100vh;
+  background-color: #f8f9fa;
+  display: flex;
+  flex-direction: column;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+}
+
+.appBody {
+  display: flex;
+  flex: 1;
+  min-height: calc(100vh - 80px);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .appBody {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 1024px) {
+  .app {
+    font-size: 14px;
+  }
+}

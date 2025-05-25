@@ -1,0 +1,82 @@
+/* ActivityFeed.module.css */
+.activityFeed {
+  background: #f6faff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.activityHeader {
+  margin-bottom: 20px;
+}
+
+.activityTitle {
+  font-size: 18px;
+  font-weight: 600;
+  color: #100b8b;
+  margin: 0 0 4px 0;
+}
+
+.activitySubtitle {
+  font-size: 12px;
+  color: #718096;
+  margin: 0;
+}
+
+.activityChart {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.chartBars {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  height: 80px;
+  gap: 4px;
+}
+
+.chartBar {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.barFill {
+  width: 8px;
+  background: linear-gradient(
+    to bottom,
+    #4299e1 0%,
+    #63b3ed 50%,
+    #90cdf4 100%
+  );
+  border-radius: 4px;
+  min-height: 20%;
+  transition: all 0.3s ease;
+}
+
+.barFill:nth-child(odd) {
+  background: linear-gradient(
+    to bottom,
+    #38b2ac 0%,
+    #4fd1c7 50%,
+    #81e6d9 100%
+  );
+}
+
+.chartDays {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 8px;
+}
+
+.chartDay {
+  font-size: 11px;
+  color: #a0aec0;
+  text-align: center;
+  flex: 1;
+}

@@ -1,0 +1,200 @@
+/* src/styles/AnatomySection.module.css */
+
+.anatomySection {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 400px;
+  padding:0;
+  
+}
+
+.anatomyContainer {
+  position: relative;
+  width: 320px;
+  height: 420px;
+}
+
+.humanBodyCard {
+  width: 100%;
+  height: 100%;
+  background: #f6faff;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(69, 0, 0, 0.08);
+  position: relative;
+  overflow: visible;
+  border: 1px solid #f6faff;
+}
+
+.cardContent {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bodyImage {
+  width: 500px;
+  height: 400px;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.1));
+  padding-bottom: 30px;
+}
+
+/* Health Indicators */
+.healthIndicator {
+  position: absolute;
+  z-index: 10;
+}
+
+.healthIndicator[data-position="heart"] {
+  top: 25%;
+  right: -20px;
+  transform: translateY(-50%);
+}
+
+.healthIndicator[data-position="leg"] {
+  bottom: 35%;
+  left: -20px;
+  transform: translateY(50%);
+}
+
+.indicatorBadge {
+  background: #3b82f6;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+  position: relative;
+}
+
+/* Speech bubble arrow pointing to the body */
+.healthIndicator[data-position="heart"] .indicatorBadge::after {
+  content: '';
+  position: absolute;
+  left: -8px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-right: 8px solid #3b82f6;
+}
+
+.healthIndicator[data-position="leg"] .indicatorBadge::after {
+  content: '';
+  position: absolute;
+  right: -8px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-left: 8px solid #3b82f6;
+}
+
+/* Leg indicator styling - cyan color to match the image */
+.healthIndicator[data-position="leg"] .indicatorBadge {
+  background: #06b6d4;
+  box-shadow: 0 4px 12px rgba(6, 182, 212, 0.3);
+}
+
+.healthIndicator[data-position="leg"] .indicatorBadge::after {
+  border-left-color: #06b6d4;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .anatomyContainer {
+    width: 250px;
+    height: 320px;
+  }
+  
+  .anatomySection {
+    min-height: 350px;
+  }
+  
+  .cardContent {
+    padding: 15px;
+  }
+  
+  .indicatorBadge {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+  
+  .healthIndicator[data-position="heart"] {
+    left: -15px;
+  }
+  
+  .healthIndicator[data-position="leg"] {
+    left: -15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .anatomyContainer {
+    width: 200px;
+    height: 280px;
+  }
+  
+  .anatomySection {
+    min-height: 300px;
+    padding: 15px;
+  }
+  
+  .cardContent {
+    padding: 12px;
+  }
+  
+  .indicatorBadge {
+    font-size: 11px;
+    padding: 5px 10px;
+    gap: 6px;
+  }
+  
+  .healthIndicator[data-position="heart"] {
+    left: -10px;
+  }
+  
+  .healthIndicator[data-position="leg"] {
+    left: -10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .anatomyContainer {
+    width: 180px;
+    height: 240px;
+  }
+  
+  .anatomySection {
+    min-height: 260px;
+    padding: 10px;
+  }
+  
+  .humanBodyCard {
+    border-radius: 12px;
+  }
+  
+  .cardContent {
+    padding: 10px;
+  }
+  
+  .indicatorBadge {
+    font-size: 10px;
+    padding: 4px 8px;
+  }
+}

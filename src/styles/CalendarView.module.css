@@ -1,0 +1,241 @@
+/* src/styles/CalendarView.module.css */
+
+.calendarView {
+  background: #f6faff;
+  border-radius: 20px;
+  padding: 32px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.calendarHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.dateSelector {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.thisWeek {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  color: #6c757d;
+  cursor: pointer;
+}
+
+.monthYear {
+  font-size: 20px;
+  font-weight: 700;
+  color: #100b8b;
+  margin: 0;
+}
+
+.calendarNav {
+  display: flex;
+  gap: 8px;
+}
+
+.navButton {
+  width: 32px;
+  height: 32px;
+  border: 1px solid #4f46e5 ;
+  background:#4f46e5;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.navButton:hover {
+  background: #4338ca;
+  border-color: #4338ca;
+}
+
+.calendarGrid {
+  margin-bottom: 24px;
+}
+
+.calendarDaysHeader {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+  margin-bottom: 0px;
+}
+
+.dayHeader {
+  text-align: center;
+  font-size: 12px;
+  font-weight: 600;
+  color: #100b8b;
+  padding: 8px 4px;
+}
+
+.calendarDates {
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+}
+
+.calendarDate {
+  min-height: 80px;
+  padding: 8px;
+  border-radius: 12px;
+  background: #f8f9fa;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  transition: all 0.2s ease;
+}
+
+.calendarDate.highlighted {
+  background: #f0f4ff;
+  border: 2px solid #5742f5;
+}
+
+.calendarDate:hover {
+  background: #e9ecef;
+}
+
+.calendarDate.highlighted:hover {
+  background: #e6efff;
+}
+
+.dateNumber {
+  font-size: 14px;
+  font-weight: 600;
+  color: #100b8b;
+  align-items: center;
+}
+
+.dateAppointments {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+}
+
+.appointmentTime {
+  font-size: 10px;
+  color: #100b8b;
+  gap:20px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.appointmentCards {
+  display: flex;
+  gap: 16px;
+  
+}
+
+.appointmentCard {
+  position: relative;
+  flex: 1;
+  padding: 20px;
+  border-radius: 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  min-height: 80px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.cardIcon {
+  position: absolute;
+   top: 12px;
+  right: 12px;
+  font-size: 24px;
+ ;
+ 
+}
+
+.cardContent {
+  flex: 1;
+}
+
+.cardTitle {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0 0 4px 0;
+}
+
+.cardTime {
+  font-size: 12px;
+  margin: 0 0 2px 0;
+  opacity: 0.9;
+}
+
+.cardDoctor {
+  font-size: 11px;
+  margin: 0;
+  opacity: 0.8;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .calendarView {
+    padding: 20px;
+  }
+  
+  .calendarHeader {
+    margin-bottom: 20px;
+  }
+  
+  .monthYear {
+    font-size: 18px;
+  }
+  
+  .calendarDate {
+    min-height: 60px;
+    padding: 6px;
+  }
+  
+  .dateNumber {
+    font-size: 12px;
+  }
+  
+  .appointmentTime {
+    font-size: 9px;
+    padding: 1px 4px;
+  }
+  
+  .appointmentCards {
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .appointmentCard {
+    padding: 16px;
+    min-height: 60px;
+    gap: 12px;
+  }
+  
+  .cardIcon {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+  
+  .cardTitle {
+    font-size: 13px;
+  }
+  
+  .cardTime {
+    font-size: 11px;
+  }
+  
+  .cardDoctor {
+    font-size: 10px;
+  }
+}
