@@ -14,8 +14,21 @@
 .dashboardTitle {
   font-size: 28px;
   font-weight: 600;
-  color: #100b8b;
+  color:  #100b8b;
   margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 330px;
+  
+}
+.thisWeek {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* space between "This Week" and ChevronDown icon */
+  font-size: 16px;
+  color: #100b8b;
+  font-weight: 500;
+  cursor: pointer;
 }
 
 .dashboardContent {
@@ -30,20 +43,21 @@
 .dashboardLeft {
   display: flex;
   flex-direction: column;
-  gap: 24px;
-  background-color: white;
+  gap: 32px;
+    background-color: white;
 }
 
 .dashboardRight {
   display: flex;
   flex-direction: column;
-border-radius: 8px; /* Unified border radius */
+  border-radius: 8px; /* Unified border radius */
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Unified shadow */
   overflow: hidden;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Unified shadow */
   background-color: #f6faff;
   overflow: hidden;
-  margin-top: -86px;
+  margin-top: -110px;
+ 
 }
 .dashboardRight > * {
   background: transparent !important;
@@ -52,7 +66,19 @@ border-radius: 8px; /* Unified border radius */
   border-radius: 0 !important;
   margin: 0 !important;
 }
-
+.bottomRightText {
+  position: relative;
+  bottom: 1px;
+  right: 1px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #100b8b;
+  font-weight: 500;
+  cursor: pointer;
+  margin-left: 490px;
+  margin-top: -30px;
+}
 /* Responsive design */
 @media (max-width: 1200px) {
   .dashboardContent {
@@ -68,11 +94,11 @@ border-radius: 8px; /* Unified border radius */
   
   .dashboardContent {
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 24px;
   }
   
   .dashboardTitle {
-    font-size: 24px;
+    font-size: 28px;
   }
 }
 
@@ -82,19 +108,19 @@ border-radius: 8px; /* Unified border radius */
   }
   
   .dashboardHeader {
-    margin-bottom: 20px;
+    margin-bottom: 24px;
   }
   
   .dashboardTitle {
-    font-size: 22px;
+    font-size: 24px;
   }
   
   .dashboardContent {
-    gap: 16px;
+    gap: 20px;
   }
   
   .dashboardLeft,
   .dashboardRight {
-    gap: 16px;
+    gap: 20px;
   }
 }

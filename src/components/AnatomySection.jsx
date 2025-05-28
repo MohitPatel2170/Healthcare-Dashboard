@@ -27,7 +27,7 @@ const AnatomySection = () => {
             {/* Leg Health Indicator */}
             <div className={styles.healthIndicator} data-position="leg">
               <div className={styles.indicatorBadge}>
-                <span>Healthy Leg</span>
+                <span>🦵 Healthy Leg</span>
               </div>
             </div>
           </div>

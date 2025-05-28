@@ -68,12 +68,61 @@ export const appointmentCards = [
   }
 ];
 
-export const activityData = [
-  { day: 'Mon', value: 40 },
-  { day: 'Tues', value: 80 },
-  { day: 'Wed', value: 30 },
-  { day: 'Thurs', value: 60 },
-  { day: 'Fri', value: 90 },
-  { day: 'Sat', value: 45 },
-  { day: 'Sun', value: 70 }
+export const activityData =  [
+  {
+    day: 'Mon',
+    bars: [
+      { height: 30, type: 'primary' },
+      { height: 45, type: 'secondary' }
+    ]
+  },
+  {
+    day: 'Tues',
+    bars: [
+      { height: 25, type: 'secondary' },
+      { height: 70, type: 'primary' },
+      { height: 55, type: 'secondary' },
+      { height: 40, type: 'primary' }
+    ]
+  },
+  {
+    day: 'Wed',
+    bars: [
+      { height: 35, type: 'primary' },
+      { height: 20, type: 'secondary' }
+    ]
+  },
+  {
+    day: 'Thurs',
+    bars: [
+      { height: 40, type: 'secondary' },
+      { height: 25, type: 'primary' },
+      { height: 50, type: 'secondary' }
+    ]
+  },
+  {
+    day: 'Fri',
+    bars: [
+      { height: 35, type: 'primary' },
+      { height: 80, type: 'secondary' },
+      { height: 45, type: 'primary' },
+      { height: 60, type: 'secondary' }
+    ]
+  },
+  {
+    day: 'Sat',
+    bars: [
+      { height: 30, type: 'secondary' },
+      { height: 55, type: 'primary' },
+      { height: 25, type: 'secondary' }
+    ]
+  },
+  {
+    day: 'Sun',
+    bars: [
+      { height: 40, type: 'primary' },
+      { height: 35, type: 'secondary' },
+      { height: 65, type: 'primary' }
+    ]
+  }
 ];
